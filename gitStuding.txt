@@ -4,7 +4,7 @@ cd git foldername								перехід до папки
 
 git status --untracked-files=all				показує вміст (статус) всього репозіторію
 
-git add .										затреккерувати файли
+git add .										затреккерувати файли, проіндиксувати файл
 
 git rm --cached file.txt						відтреккерити файл (якщо затрекений) і більше не трекерити
 
@@ -23,3 +23,16 @@ git log --since=2.weeks							показати логи(зміни) за ост.
 q												вихід із логу
 
 git log -p -2									показати зміни 2-х останніх коммітів і що саме змінено
+
+git commit										після індексіції зміненого файлу відкриває редактор для коментарів VIM. Пишеться коментар, нажимаєш "esc" що завершити запис, ":" щоб перейти на командний рядок редактора, "x" щоб зберегти і вийти
+
+git config --global core.editor "'C:\Program Files\Sublime Text 2\sublime_text.exe' - multiInst -notabar -nosession -noPlugin"													
+
+git checked -b new_f							створення нової гілки з назвою new_f
+
+git branch -v 									показує всі комміти гілки
+
+git branch new-f2								створює нову гілку без переключання на неї
+
+git checkout new_f2								перехід на мітку new_f2
+
