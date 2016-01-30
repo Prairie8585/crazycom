@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>jQuery для начинающих. Часть 2. Слайд-меню. Пример 2</title>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".btn-slide").toggle(function(){
+		$(this).parent().parent().find(".panel").animate({"width": "+=120px"}, "slow");
+		$(this).toggleClass("active"); return false;
+	},function(){
+		$(this).parent().parent().find(".panel").animate({"width": "-=120px"}, "slow");
+		$(this).toggleClass("active"); return false;
+	});	 
+});
+</script>
+
+<style type="text/css">
+body {
+	margin: 0 auto;
+	padding: 0;
+	/*width: 520px;*/
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+
+.body {
+    padding:0;
+	border: 1px #ccc solid;
+}
+
+a:focus {
+	outline: none;
+}
+.left{
+    float:left;  
+	width:164px;
+}
+.right{
+    float:right; 
+	width:164px;
+}
+.panel{
+    width:0px;
+	background: #ccc;
+	height: 265px;
+    overflow:hidden;
+}
+.left .slide {
+    border-left:solid 4px #aaa; 
+	margin: 0;
+	padding: 0;
+	background: url(img/btn-slide-left.gif) no-repeat left center;
+	height: 265px;
+	width:38px;
+	float:left;
+}
+.left .panel{
+	float:left;
+}
+.right .slide {
+    border-right:solid 4px #aaa; 
+	margin: 0;
+	padding: 0;
+	background: url(img/btn-slide-right.gif) no-repeat left center;
+	height: 265px;
+	width:38px;
+	float:right;
+}
+.right .panel{
+	float:right;
+}
+.left .btn-slide {
+	background: url(img/white-arrow-hor.gif) no-repeat -45px 80px;
+	text-indent: -9000%;
+	display: block;
+	height: 265px;
+	width:38px;
+}
+.right .btn-slide {
+	background: url(img/white-arrow-hor.gif) no-repeat 15px 80px;
+	text-indent: -9000%;
+	display: block;
+	height: 265px;
+	width:38px;
+}
+
+.left .active {
+	background-position: 10px 80px;
+}
+.right .active {
+	background-position: -45px 80px;
+}
+
+.panel ul {
+    list-style:none;
+    border-bottom:1px solid #333;
+    padding:10px;
+    margin:0;
+}
+
+.panel ul a{
+    font-weight:bold;
+    color: #333;
+    white-space: nowrap;
+}
+</style>
+</head>
+
+<body>
+
+<div class="body">
+
+<div class="left">
+
+    <div class="panel">
+    	<ul>
+    	   <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+    	   <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+    	   <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+    	</ul>
+    	<ul>
+    	   <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+    	   <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+    	   <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+    	</ul>
+    	<ul>
+    	   <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+    	   <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+    	   <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+    	</ul>
+    </div> 
+    
+    <p class="slide"><a href="#" class="btn-slide">Меню</a></p>
+</div>
+
+<div class="right">
+
+    <div class="panel">
+    	<ul>
+    	   <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+    	   <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+    	   <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+    	</ul>
+    	<ul>
+    	   <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+    	   <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+    	   <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+    	</ul>
+    	<ul>
+    	   <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+    	   <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+    	   <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+    	</ul>
+    </div> 
+    
+    <p class="slide"><a href="#" class="btn-slide">Меню</a></p>
+</div>
+</div>
+</body>
+</html>
