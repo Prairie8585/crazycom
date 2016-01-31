@@ -5,9 +5,5 @@
 	$hellod = "Heeelllooo!!!3";
 
 
-<<<<<<< HEAD
 	echo "New Branch!";
-=======
-	echo "next Branch";
->>>>>>> master
 ?>
